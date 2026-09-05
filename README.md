@@ -233,8 +233,9 @@ The model artifacts are intentionally not included in the GitHub repository beca
 
 ---
 
-## 📁 Project Structure
 
+## 📁 Project Structure
+```text
 RoadSense-AI/
 │
 ├── Backend/
@@ -298,7 +299,7 @@ RoadSense-AI/
 ├── README.md
 ├── package.json
 └── package-lock.json
-
+```
 Note: roadsense_severity_model.pkl is excluded from version control because of its large file size.
 
 ## ⚙️ Installation & Setup
@@ -406,6 +407,7 @@ http://localhost:5173
 
 ## 📊 Data Pipeline
 
+```text
 Raw Accident Dataset
         │
         ▼
@@ -431,9 +433,11 @@ FastAPI Prediction API
         │
         ▼
 React Prediction Interface
+```
 
 ## 📈 Analytics Pipeline
 
+```text
 MySQL Accident Records
         │
         ▼
@@ -447,6 +451,7 @@ MySQL Accident Records
         │
         ▼
 Interactive Analytics
+```
 
 ## 🗺️ Map Visualization
 
@@ -507,10 +512,11 @@ RoadSense AI was developed with the following objectives:
 - 🔗 **Integrate analytics, database management, APIs, and machine learning into a single platform.**
 - 🛡️ **Provide a foundation for future intelligent road-safety systems.**
 
-## 💡 Why RoadSense AI?
+## 💡 Why RoadSense AI
 
 RoadSense AI brings together multiple areas of Computer Science into one practical application:
 
+```text
                  RoadSense AI
                       │
        ┌──────────────┼──────────────┐
@@ -524,6 +530,7 @@ RoadSense AI brings together multiple areas of Computer Science into one practic
        └──────────────┼──────────────┘
                       ▼
               Road Safety Analytics
+```
 
 The project demonstrates the practical implementation of:
 
