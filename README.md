@@ -192,41 +192,51 @@ The model artifacts are intentionally not included in the GitHub repository beca
                      │ Prediction Results  │
                      └─────────────────────┘
 
-🛠️ Technology Stack
-# Frontend
-React
-Vite
-JavaScript
-CSS
-React Leaflet
-Recharts
 
-# Backend
-Python
-FastAPI
-Uvicorn
-SQLAlchemy
-Pydantic
+## 🛠️ Technology Stack
 
-# Database
-MySQL
-Database Name: roadsense_db
+### 🎨 Frontend
 
-# Machine Learning
-Python
-Pandas
-NumPy
-Scikit-learn
-Joblib
+- **React**
+- **Vite**
+- **JavaScript**
+- **CSS**
+- **React Leaflet**
+- **Recharts**
 
-# Development Tools
-VS Code
-Git
-GitHub
-Jupyter Notebook
+### ⚙️ Backend
 
+- **Python**
+- **FastAPI**
+- **Uvicorn**
+- **SQLAlchemy**
+- **Pydantic**
 
-📁 Project Structure
+### 🗄️ Database
+
+- **MySQL**
+- **Database Name:** `roadsense_db`
+
+### 🤖 Machine Learning
+
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+- **Joblib**
+
+### 🧰 Development Tools
+
+- **VS Code**
+- **Git**
+- **GitHub**
+- **Jupyter Notebook**
+
+---
+
+## 📁 Project Structure
+
+```text
 RoadSense-AI/
 │
 ├── Backend/
@@ -291,61 +301,74 @@ RoadSense-AI/
 ├── package.json
 └── package-lock.json
 
-roadsense_severity_model.pkl is excluded from version control because of its large file size.
+Note: roadsense_severity_model.pkl is excluded from version control because of its large file size.
 
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/ishita1124/RoadSense-AI.git
 cd RoadSense-AI
-🐍 Backend Setup
 
-Navigate to the backend:
+## 🐍 Backend Setup
 
+Navigate to the backend directory:
+
+```bash
 cd Backend
 
-Create a virtual environment:
+Create a Python virtual environment:
 
 python -m venv venv
 
-Activate it on Windows:
+Activate the virtual environment on Windows:
 
 venv\Scripts\activate
 
-Install Python dependencies:
+Install the required Python dependencies:
 
 pip install -r ../requirements.txt
-🗄️ MySQL Database Setup
 
-Create the database in MySQL:
+## 🗄️ MySQL Database Setup
 
+Create the RoadSense AI database in MySQL:
+
+```sql
 CREATE DATABASE roadsense_db;
 
 Make sure MySQL is running before starting the backend.
 
-Configure your database connection according to the backend configuration.
+Configure the database connection according to the backend configuration.
 
-Never upload actual database passwords or credentials to GitHub.
+## 🚀 Start FastAPI Backend
 
-🚀 Start FastAPI Backend
+From the `Backend` directory, start the FastAPI development server:
 
-From the Backend directory:
-
+```bash
 uvicorn app.main:app --reload
 
 The backend will run at:
 
 http://127.0.0.1:8000
 
-FastAPI API documentation is available at:
+### 📚 FastAPI API Documentation
 
+Interactive API documentation is available at:
+
+```text
 http://127.0.0.1:8000/docs
-💻 Frontend Setup
 
-Open another terminal and navigate to:
+The Swagger UI allows you to explore and test the available API endpoints.
 
+## 💻 Frontend Setup
+
+Open another terminal and navigate to the frontend directory:
+
+```bash
 cd Frontend
 
-Install dependencies:
+Install the required dependencies:
 
 npm install
 
@@ -357,25 +380,37 @@ The frontend will be available at the URL displayed by Vite, usually:
 
 http://localhost:5173
 
+## 🔌 API Endpoints
 
-🔌 API Endpoints
-Accident APIs
-GET /api/accidents/
-GET /api/accidents/counts
-Analytics APIs
-GET /api/analytics/summary
-GET /api/analytics/by-city
-GET /api/analytics/by-state
-GET /api/analytics/by-cause
-GET /api/analytics/by-weather
-GET /api/analytics/by-road-type
-GET /api/analytics/by-time-period
-GET /api/analytics/by-severity
-Prediction API
-POST /predict/
+### 🚗 Accident APIs
 
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/accidents/` | Retrieve accident records |
+| `GET` | `/api/accidents/counts` | Retrieve accident count statistics |
 
-📊 Data Pipeline
+### 📊 Analytics APIs
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/analytics/summary` | Retrieve overall accident analytics |
+| `GET` | `/api/analytics/by-city` | Retrieve accident statistics by city |
+| `GET` | `/api/analytics/by-state` | Retrieve accident statistics by state |
+| `GET` | `/api/analytics/by-cause` | Retrieve accident statistics by cause |
+| `GET` | `/api/analytics/by-weather` | Retrieve accident statistics by weather |
+| `GET` | `/api/analytics/by-road-type` | Retrieve accident statistics by road type |
+| `GET` | `/api/analytics/by-time-period` | Retrieve accident statistics by time period |
+| `GET` | `/api/analytics/by-severity` | Retrieve accident statistics by severity |
+
+### 🤖 Prediction API
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/predict/` | Predict accident severity and risk |
+
+## 📊 Data Pipeline
+
+```text
 Raw Accident Dataset
         │
         ▼
@@ -402,26 +437,26 @@ FastAPI Prediction API
         ▼
 React Prediction Interface
 
+## 📈 Analytics Pipeline
 
-📈 Analytics Pipeline
+```text
 MySQL Accident Records
-          │
-          ▼
-       FastAPI
-          │
-          ▼
-     Aggregation
-          │
-          ▼
+        │
+        ▼
+     FastAPI
+        │
+        ▼
+   Aggregation
+        │
+        ▼
  React + Recharts
-          │
-          ▼
+        │
+        ▼
 Interactive Analytics
 
+## 🗺️ Map Visualization
 
-🗺️ Map Visualization
-
-RoadSense AI uses React Leaflet to provide an interactive geographical representation of accident records.
+RoadSense AI uses **React Leaflet** to provide an interactive geographical representation of accident records.
 
 At lower zoom levels, accident records are aggregated to avoid overwhelming the map with thousands of individual markers.
 
@@ -429,70 +464,66 @@ As the user zooms in, the visualization progressively reveals more detailed acci
 
 This provides a balance between:
 
-Performance
-Readability
-Geographical exploration
-Individual accident inspection
+- ⚡ **Performance**
+- 👁️ **Readability**
+- 🌍 **Geographical Exploration**
+- 🔎 **Individual Accident Inspection**
 
-
-🔐 Security & Configuration
+## 🔐 Security & Configuration
 
 Sensitive configuration values should never be committed to GitHub.
 
 Recommended environment variables include:
 
+```env
 DATABASE_URL=your_database_connection
 
-Use a local .env file for actual credentials.
+## 🚧 Current Limitations
 
-The .env file should remain in .gitignore.
+- 📉 The current ML model has moderate predictive performance.
+- 📊 Accident prediction quality depends on the quality and distribution of historical data.
+- 📦 The trained model file is not stored directly in the repository because of GitHub file-size restrictions.
+- 💻 The application currently runs locally and requires the backend, frontend, and MySQL database to be configured.
 
-
-🚧 Current Limitations
-The current ML model has moderate predictive performance.
-Accident prediction quality depends on the quality and distribution of historical data.
-The trained model file is not stored directly in the repository because of GitHub file-size restrictions.
-The application currently runs locally and requires the backend, frontend, and MySQL database to be configured.
-
-
-🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 Potential improvements include:
 
-📍 Real-time accident data integration
-🚦 Traffic-density integration
-🌦️ Live weather API integration
-🛰️ More advanced geospatial analysis
-🧠 Improved ML models and hyperparameter tuning
-📱 Mobile-responsive optimization
-☁️ Cloud deployment
-🔔 Accident-risk alerts
-🗺️ Predictive risk heatmaps
-📊 Advanced forecasting
-👥 User authentication and personalized dashboards
-🎓 Project Objectives
+- 📍 **Real-time Accident Data Integration**
+- 🚦 **Traffic-Density Integration**
+- 🌦️ **Live Weather API Integration**
+- 🛰️ **More Advanced Geospatial Analysis**
+- 🧠 **Improved ML Models & Hyperparameter Tuning**
+- 📱 **Mobile-Responsive Optimization**
+- ☁️ **Cloud Deployment**
+- 🔔 **Accident-Risk Alerts**
+- 🗺️ **Predictive Risk Heatmaps**
+- 📊 **Advanced Forecasting**
+- 👥 **User Authentication & Personalized Dashboards**
+
+## 🎓 Project Objectives
 
 RoadSense AI was developed with the following objectives:
 
-Analyze historical road accident patterns.
-Identify major factors associated with accidents.
-Visualize accident distributions geographically.
-Provide interactive accident exploration.
-Build an ML-based accident severity prediction system.
-Integrate analytics, database management, APIs, and machine learning into a single platform.
-Provide a foundation for future intelligent road-safety systems.
+- 📊 **Analyze historical road accident patterns.**
+- 🔍 **Identify major factors associated with accidents.**
+- 🗺️ **Visualize accident distributions geographically.**
+- 🔎 **Provide interactive accident exploration.**
+- 🤖 **Build an ML-based accident severity prediction system.**
+- 🔗 **Integrate analytics, database management, APIs, and machine learning into a single platform.**
+- 🛡️ **Provide a foundation for future intelligent road-safety systems.**
 
-
-💡 Why RoadSense AI?
+## 💡 Why RoadSense AI?
 
 RoadSense AI brings together multiple areas of Computer Science into one practical application:
 
+```text
                  RoadSense AI
                       │
        ┌──────────────┼──────────────┐
        │              │              │
        ▼              ▼              ▼
-   Data Science   Web Development   Database
+  Data Science   Web Development   Database
        │              │              │
        ▼              ▼              ▼
       ML          React/FastAPI     MySQL
@@ -501,22 +532,24 @@ RoadSense AI brings together multiple areas of Computer Science into one practic
                       ▼
               Road Safety Analytics
 
-The project demonstrates practical implementation of:
+The project demonstrates the practical implementation of:
 
 Data → Database → API → Machine Learning → Visualization → Decision Support
 
-👩‍💻 Author
-Ishita
+## 👩‍💻 Author
 
-B.Tech – Computer Science & Engineering (AI/ML)
+**Ishita**
 
-Interested in:
+🎓 **B.Tech – Computer Science & Engineering (AI/ML)**
 
-Data Analytics
-Data Science
-Machine Learning
-Artificial Intelligence
-Full-Stack Development
+### 💡 Areas of Interest
 
-⭐ Support
+- 📊 **Data Analytics**
+- 📈 **Data Science**
+- 🤖 **Machine Learning**
+- 🧠 **Artificial Intelligence**
+- 💻 **Full-Stack Development**
+
+## ⭐ Support
+
 If you find this project interesting, consider giving the repository a ⭐ on GitHub.
