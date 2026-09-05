@@ -162,7 +162,6 @@ The model artifacts are intentionally not included in the GitHub repository beca
 
 # 🏗️ System Architecture
 
-```text
                     ┌─────────────────────────┐
                     │       React Frontend    │
                     │     React + Vite + CSS   │
@@ -236,7 +235,6 @@ The model artifacts are intentionally not included in the GitHub repository beca
 
 ## 📁 Project Structure
 
-```text
 RoadSense-AI/
 │
 ├── Backend/
@@ -307,7 +305,7 @@ Note: roadsense_severity_model.pkl is excluded from version control because of i
 
 ### 1️⃣ Clone the Repository
 
-```bash
+bash
 git clone https://github.com/ishita1124/RoadSense-AI.git
 cd RoadSense-AI
 
@@ -315,7 +313,7 @@ cd RoadSense-AI
 
 Navigate to the backend directory:
 
-```bash
+bash
 cd Backend
 
 Create a Python virtual environment:
@@ -334,7 +332,7 @@ pip install -r ../requirements.txt
 
 Create the RoadSense AI database in MySQL:
 
-```sql
+sql
 CREATE DATABASE roadsense_db;
 
 Make sure MySQL is running before starting the backend.
@@ -345,7 +343,7 @@ Configure the database connection according to the backend configuration.
 
 From the `Backend` directory, start the FastAPI development server:
 
-```bash
+bash
 uvicorn app.main:app --reload
 
 The backend will run at:
@@ -356,7 +354,6 @@ http://127.0.0.1:8000
 
 Interactive API documentation is available at:
 
-```text
 http://127.0.0.1:8000/docs
 
 The Swagger UI allows you to explore and test the available API endpoints.
@@ -364,8 +361,7 @@ The Swagger UI allows you to explore and test the available API endpoints.
 ## 💻 Frontend Setup
 
 Open another terminal and navigate to the frontend directory:
-
-```bash
+bash
 cd Frontend
 
 Install the required dependencies:
@@ -410,7 +406,6 @@ http://localhost:5173
 
 ## 📊 Data Pipeline
 
-```text
 Raw Accident Dataset
         │
         ▼
@@ -439,7 +434,6 @@ React Prediction Interface
 
 ## 📈 Analytics Pipeline
 
-```text
 MySQL Accident Records
         │
         ▼
@@ -475,7 +469,7 @@ Sensitive configuration values should never be committed to GitHub.
 
 Recommended environment variables include:
 
-```env
+env
 DATABASE_URL=your_database_connection
 
 ## 🚧 Current Limitations
@@ -517,7 +511,6 @@ RoadSense AI was developed with the following objectives:
 
 RoadSense AI brings together multiple areas of Computer Science into one practical application:
 
-```text
                  RoadSense AI
                       │
        ┌──────────────┼──────────────┐
@@ -538,7 +531,7 @@ Data → Database → API → Machine Learning → Visualization → Decision Su
 
 ## 👩‍💻 Author
 
-**Ishita**
+**Ishita Bansal**
 
 🎓 **B.Tech – Computer Science & Engineering (AI/ML)**
 
